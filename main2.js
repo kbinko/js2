@@ -1,3 +1,5 @@
+"use strict"; // włącza tryb ścisły, w którym nie można używać niezadeklarowanych zmiennych 
+
 // // Modifying html elements
 
 // var test = document.getElementById("test"); // wartoscia test jest element w html o id "test"
@@ -150,6 +152,21 @@ console.log();
 
 console.log();
 
+// rest operator - operator ktory pozwala na przekazanie dowolnej ilosci argumentow do funkcji 
+
+
+// function addNumbers(greetingName, ...numbers) {
+//     let total = 0;
+//     for (index in numbers) {
+//         total += numbers[index];
+//     }
+//     return `${ greetingName }: the total is ${total}`;
+// }
+
+// console.log(addNumbers("Konrad", 4, 6, 10));
+
+console.log();
+
 // this keyword - odwolanie sie do obiektu w ktorym znajduje sie funkcja w ponizszym przykladzie funkcja znajduje sie w obiekcie person wiec this.name i this.age odwoluje sie do wartosci name i age obiektu person 
 
 
@@ -216,16 +233,15 @@ console.log();
 // Try Catch Throw i Finally - try - próba wykonania kodu, catch - jeśli wystąpi błąd to wykonaj kod w catch, throw - pokaż  błąd, finally - wykonaj kod w finally niezależnie czy wystąpi błąd czy nie
 
 // try {
-//     var a = 10;
-//     var b = 0;
-//     if (b == 0) throw "Nie dziel przez zero";
-//     var c = a / b;
+//     functionTHatDoesNotExist();
 //     console.log(c);
 // } catch (error) {
-//     console.log(error);
+//     console.warn(error);
 // } finally {
 //     console.log("To sie zawsze wykonuje");
 // }
+
+// console.log("Show me");
 
 console.log();
 
@@ -496,4 +512,171 @@ console.log();
 // let programmer = new Programmer("Konrad", 25, "JavaScript");
 // programmer.speak(); // wywołuje metode speak z klasy Programmer. Jesli do dodamy super.speak() to wywoła ona metode speak z obu klas
 
+console.log();
+
+// callback functions - funkcje zwrotne, które są wywoływane wewnątrz innej funkcji. Przydatne gdy chcemy wykonać pewną czynność po wykonaniu innej czynności np. po kliknięciu w przycisk.
+
+// console.log('waiting 3 seconds');
+
+// setTimeout(function() {
+//     console.log('3 seconds have passed');
+// }, 3000); // funkcja setTimeout wywołuje funkcje wewnątrz siebie po upływie określonego czasu. W tym przypadku po 3 sekundach.
+
+console.log();
+
+// timed events with timeouts and intervals - zdarzenia czasowe z użyciem setTimeout i setInterval. Przydatne gdy chcemy wykonać pewną czynność co określony czas np. co 5 sekund.
+
+// let count = 0;
+// setInterval(function() {
+//     console.log('2 seconds have passed');
+//     count++;
+
+//     if (count === 3) {
+//         console.log('done');
+//         clearInterval(this);
+//     }
+
+// }, 2000); // funkcja setInterval wywołuje funkcje wewnątrz siebie co określony czas. W tym przypadku co 3 sekundy.
+
+console.log();
+
+// let d = new Date(2025, 1, 15);
+
+// console.log(d);
+
+// d.getFullYear(); // zwraca rok
+// d.getMonth(); // zwraca miesiąc
+// d.getDate(); // zwraca dzień
+
+console.log();
+
+// destructing arrays and objects - destrukturyzacja tablic i obiektów. Przydatne gdy chcemy przypisać wartości z tablicy lub obiektu do zmiennych.
+
+// const months = ['January', 'February', 'December'];
+// const [jan, feb] = months; // destrukturyzacja tablicy. Przypisuje wartości z tablicy do zmiennych. W tym przypadku do zmiennych jan i feb przypisuje wartości z tablicy months.
+// console.log(jan, feb);
+// console.log(months);
+
+// const person = {
+//     name: 'Konrad',
+//     age: 25,
+//     height: 180
+// };
+
+// const { name, age, height } = person;
+// console.log(name);
+// console.log(age);
+// console.log(height);
+
+// delete person.name; // usuwa właściwość z obiektu person
+
+// console.log(person);
+
+console.log();
+
+// math 
+
+// Math.round(4.7); // zaokrągla do najbliższej liczby całkowitej
+// Math.ceil(4.4); // zaokrągla do najbliższej liczby całkowitej w górę
+// Math.floor(4.7); // zaokrągla do najbliższej liczby całkowitej w dół
+// Math.sqrt(64); // zwraca pierwiastek kwadratowy
+// Math.abs(-4.7); // zwraca wartość bezwzględną
+// Math.pow(8, 2); // zwraca potęgę
+// Math.min(2, 33, 4, 1, 55, 6, 3, -2); // zwraca najmniejszą liczbę
+// Math.max(2, 33, 4, 1, 55, 6, 3, -2); // zwraca największą liczbę
+// Math.random(); // zwraca losową liczbę z przedziału od 0 do 1
+// Math.random() * 10; // zwraca losową liczbę z przedziału od 0 do 10
+// Math.floor(Math.random() * 10); // zwraca losową liczbę z przedziału od 0 do 10 zaokrągloną do najbliższej liczby całkowitej w dół
+
+
+console.log();
+
+// random number guessing game 
+
+// while (true) {
+//     let randomNumber = Math.floor(Math.random() * 10);
+//     let guess = prompt('Guess a number between 1 and 10');
+
+//     if (parseInt(guess) === randomNumber) {
+//         alert('You guessed it!');
+//         break;
+//     } else {
+//         alert(`Sorry, the correct number was ${randomNumber}`);
+//     }
+// }
+
+console.log();
+
+// arrow functions - funkcje strzałkowe. Przydatne gdy chcemy skrócić zapis funkcji.
+
+// const hello = () => console.log("Hello World!");
+// (hello());
+
+// const add = (a, b) => console.log(a + b);
+// (add(2, 3));
+
+// const greeting = (name) => console.log(`Hello ${name}`);
+// greeting('Konrad');
+
+
+
+// function myName(name) {
+//     console.log(`My name is ${name}`);
+// }
+
+// const anonymousFunction = function (name) {
+//     console.log(`My name is ${name}`);
+// }
+
+// const arrowFunction = (name) => console.log(`My name is ${name}`);
+
+console.log();
+
+// json - format wymiany danych. Przydatny gdy chcemy przekazać dane z serwera do klienta lub odwrotnie.
+
+// ajax - asynchroniczne żądania do serwera. Przydatne gdy chcemy pobrać dane z serwera bez przeładowania strony
+
+// XMLHttpRequest przestarzala metoda 
+
+// const xhr = new XMLHttpRequest();
+
+// xhr.open('GET', 'https://jsonplaceholder.typicode.com/users'); // metoda open przyjmuje 2 parametry: 1 - metoda żądania np. GET, POST, PUT, DELETE, 2 - adres url do którego wysyłamy żądanie
+
+// xhr.onload = function() {
+//         if (this.status === 200) { // this.status zwraca status żądania. 200 oznacza że żądanie zostało wykonane poprawnie
+//             const users = JSON.parse(this.responseText); // metoda JSON.parse parsuje tekst do formatu JSON
+//             console.log(users);
+//         }
+//     } // metoda onload wywołuje funkcję wewnątrz siebie gdy dane zostaną pobrane z serwera
+
+// xhr.send(); // metoda send wysyła żądanie do serwera
+
+// // fetch nowoczesna metoda 
+
+// fetch('https://swapi.dev/api/people/1/')
+//     .then(response => response.json()) // metoda json() parsuje tekst do formatu JSON
+//     .then(data => console.log(data)) // metoda then wywołuje funkcję wewnątrz siebie gdy dane zostaną pobrane z serwera
+console.log();
+
+// fetch random object from https://swapi.dev/api/ and display name, mass and height value on the page after clicking button 
+
+const random = Math.floor(Math.random() * 82);
+const btn = document.getElementById('fetch');
+const name = document.getElementById('name');
+const mass = document.getElementById('mass');
+const height = document.getElementById('height');
+const gender = document.getElementById('gender');
+
+btn.addEventListener('click', fetchRandom);
+
+function fetchRandom() {
+    fetch(`https://swapi.dev/api/people/${random}/`)
+        .then(response => response.json())
+        .then(data => {
+            name.innerHTML = "Name: " + data.name;
+            mass.innerHTML = "Weight: " + data.mass + ' kg';
+            height.innerHTML = "Height: " + data.height + ' cm';
+            gender.innerHTML = "Gender: " + data.gender;
+        })
+}
 console.log();
