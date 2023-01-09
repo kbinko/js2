@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Javascript</title>
+</head>
+
+<body>
+
+    <h1 id="test"></h1>
+
+    <br>
+    <br>
+    <br>
+
+    <h1 id="sentence">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae tellus non nisi molestie tristique.
+    </h1>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1 id="x">
+    </h1>
+
+    <input type="number" id="a" placeholder="Wpisz wartość a">
+    <br>
+    <select id="operator">
+        <option value="+">add</option>
+        <option value="-">substract</option>
+        <option value="/">divide</option>
+        <option value="*">multiply</option>
+    </select>
+    <br>
+    <input type="number" id="b" placeholder="Wpisz wartość b">
+    <button onclick="Calculate()">Result</button>
+
+    <!-- <button onclick="Addition()">Add</button>
+    <button onclick="Substract()">Substract</button>
+    <button onclick="Divide()">Divide</button>
+    <button onclick="Multiplication()">Multiply</button> -->
+    <h1 id="result"></h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1 id="hoisting"></h1>
+
+    <!-- create object that will display data in table with properties taken from javascript -->
+
+    <table id="table">
+        <tr>
+            <th>Number</th>
+            <th>Date</th>
+            <th>Ammount</th>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- modal window -->
+
+    <button onclick="openModalBtn()">Open modal</button>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p>Some text in the Modal..</p>
+            <button id="ok">Ok</button>
+            <button id="cancel">Cancel</button>
+        </div>
+    </div>
+
+    <div id="array"></div>
+
+    <script src="main2.js"></script>
+</body>
+
+</html>
